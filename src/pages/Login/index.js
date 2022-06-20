@@ -14,6 +14,7 @@ function Login(){
     function handleClick() {
         history.push("/register");
     }
+
     
     let schema = yup.object().shape({
         email: yup.string().required('Digite um e-mail válido para continuar'),
