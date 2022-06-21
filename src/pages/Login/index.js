@@ -5,12 +5,16 @@ import { toast } from 'react-toastify';
 import { Redirect, useHistory} from 'react-router-dom';
 import { Api } from '../../services/api';
 import { FormStyle } from './style';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
-function Login({setAuthorization, setUser}){
+function Login({setAuthorization, setUser, user}){
     const [redirect, setRedirect] = useState(false)
     let history = useHistory()
-    
+    if(setAuthorization === true) {
+      localStorage.setItem(user)
+    }
+
+
     function handleClick() {
         history.push("/register");
     }
@@ -30,14 +34,13 @@ function Login({setAuthorization, setUser}){
             }
           })
           .then((res) => {
-
             if(res.status === 200) {
                     toast.success('Sucesso no login')
                     localStorage.setItem('token', res.data.token)
+                    localStorage.setItem('acess', true)
                     setRedirect(true)
-                    setUser(res.data.user)
-              
-                setAuthorization(true)
+                    
+                    localStorage.setItem('user', JSON.stringify(res.data.user))
             }
           })
           .catch((error) => {
@@ -45,8 +48,10 @@ function Login({setAuthorization, setUser}){
                     toast.error('Erro no login, revise seus dados')
                 }
           }) 
-
     }
+
+
+
     if(redirect) {
             return <Redirect to="/dashboard" /> 
     }

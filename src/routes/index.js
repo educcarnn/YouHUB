@@ -7,18 +7,18 @@ import { useState } from "react";
 const Routes = () => {
     const [authorization, setAuthorization] = useState(false)
     const [user, setUser] = useState([])
-    
+
     return (
    <BrowserRouter>
         <Switch>
           <Route exact path="/">
-            <Login setAuthorization={setAuthorization} setUser={setUser}/>
+            <Login  setUser={setUser}/>
           </Route>
           <Route exact path="/register">
             <Register/>
           </Route>
           <Route exact path="/dashboard">
-            <Dashboard setAuthorization={setAuthorization} authorization={authorization} user={user}/>
+            <Dashboard user={user}/>
           </Route>
         </Switch>
        </BrowserRouter>
