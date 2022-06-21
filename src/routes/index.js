@@ -5,14 +5,14 @@ import Register from "../pages/Register";
 import { useState } from "react";
 
 const Routes = () => {
-    const [authorization, setAuthorization] = useState(false)
     const [user, setUser] = useState([])
+    
 
     return (
    <BrowserRouter>
         <Switch>
           <Route exact path="/">
-            <Login  setUser={setUser}/>
+            <Login setUser={setUser}/>
           </Route>
           <Route exact path="/register">
             <Register/>

@@ -1,7 +1,10 @@
 import { Api } from "../../services/api";
 import { toast } from "react-toastify";
+import { useState } from "react"
 
-export const itemCart = (item) => {
+
+export const ItemCart = (item) => {
+
     const handleRemove = () =>{ 
         Api.delete(`/users/techs/${item.id}`,{
             headers: {
@@ -10,7 +13,6 @@ export const itemCart = (item) => {
               }
         })
         .then((res) =>{
-            console.log(res)
             if(res.status) {
                 toast.success('Tecnologia removida com sucesso')
             }

@@ -4,9 +4,8 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from 'yup';
 import { Api } from "../../services/api";
 import { toast } from "react-toastify";
-import { useEffect } from "react";
 
-function NewTechs({user, open, setOpen}){
+function NewTechs({open, setOpen, setCustomsElems}){
 
     let schema = yup.object().shape({
         title: yup.string().required('Digite uma tecnologia válida para continuar'),
@@ -26,6 +25,7 @@ function NewTechs({user, open, setOpen}){
         .then((res) => {
             if(res.status === 201) {
                 toast.success('Adicionada nova tecnologia')
+                setCustomsElems([...infos])
             }
         })
         .catch((error) => {
