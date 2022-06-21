@@ -1,7 +1,6 @@
 import { Api } from "../../services/api";
 import { toast } from "react-toastify";
-import { useState } from "react"
-
+import { LiCard } from "./style";
 
 export const ItemCart = (item) => {
 
@@ -25,12 +24,12 @@ export const ItemCart = (item) => {
     }
 
     return (
-      <li key={item.id} className="Li-Name">
+      <LiCard key={item.id} className="Li-Name">
         <h3 className="h3-name">{item.title}</h3>
         <span className="span-name">{item.status}</span>
         <button onClick={() => handleRemove(item.id)}>
           Remover
         </button>
-      </li>
+      </LiCard>
     );
   };

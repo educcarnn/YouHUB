@@ -10,5 +10,14 @@ export const Global = createGlobalStyle`
         justify-content: center;
         font-size: calc(10px + 2vmin);
         color: white;
+        box-sizing: border-box;
+        font-family: 'inter', sans-serif;
+    }
+    button{
+        cursor: pointer;
+    }
+
+    li{
+        list-style: none;
     }
 `

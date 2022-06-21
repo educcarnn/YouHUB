@@ -20,7 +20,6 @@ function Dashboard(user) {
     }, 2000);
   }
 
-
   let history = useHistory();
 
   const handleClick = () => {
@@ -37,25 +36,28 @@ function Dashboard(user) {
   if (localStorage.getItem("acess") !== null) {
     Api.get(`/users/${datesDash.id}`, {
       headers: {
-        'Content-Type': "application/json",
-      }
-    })
-    .then((res) => {  
-      setCustomsElems(res)
-    })
-    
+        "Content-Type": "application/json",
+      },
+    }).then((res) => {
+      setCustomsElems(res);
+    });
+
     return (
       <div>
-        <button onClick={handleClick}>Voltar</button>
-        <span>Olá, {datesDash.name}</span>
-        <span>{datesDash.course_module}</span>
-        <button onClick={() => setOpen(true)}>Adicionar</button>
-        <NewTechs
-          open={open}
-          user={user}
-          setOpen={setOpen}
-    
-        />
+        <div>
+          <button onClick={handleClick}>Voltar</button>
+          <div>
+            <span>Olá, {datesDash.name}</span>
+            <span>{datesDash.course_module}</span>
+          </div>
+          <div>
+          <button onClick={() => setOpen(true)}>Adicionar</button>
+          </div>
+        </div>
+        
+        <div>
+          <NewTechs open={open} user={user} setOpen={setOpen} />
+        </div>
         <ul>{customsElems?.data?.techs?.map(ItemCart)}</ul>
       </div>
     );
