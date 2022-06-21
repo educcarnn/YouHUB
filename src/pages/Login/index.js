@@ -7,7 +7,7 @@ import { Api } from '../../services/api';
 import { FormStyle } from './style';
 import { useState } from 'react';
 
-function Login(){
+function Login({setAuthorization, setUser}){
     const [redirect, setRedirect] = useState(false)
     let history = useHistory()
     
@@ -15,7 +15,6 @@ function Login(){
         history.push("/register");
     }
 
-    
     let schema = yup.object().shape({
         email: yup.string().required('Digite um e-mail válido para continuar'),
         password: yup.string().required('Digite uma senha senha válida para continuar'),
@@ -31,10 +30,14 @@ function Login(){
             }
           })
           .then((res) => {
+
             if(res.status === 200) {
-                toast.success('Sucesso no login')
-                localStorage.setItem('token', res.data.token)
-                setRedirect(true)
+                    toast.success('Sucesso no login')
+                    localStorage.setItem('token', res.data.token)
+                    setRedirect(true)
+                    setUser(res.data.user)
+              
+                setAuthorization(true)
             }
           })
           .catch((error) => {

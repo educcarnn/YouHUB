@@ -10,11 +10,11 @@ import { useState } from "react";
 function Register() {
     const [login, setLogin] = useState(false)
 
-  let history = useHistory();
+    let history = useHistory();
 
-  function handleClick() {
-    history.push("/");
-  }
+    function handleClick() {
+        history.push("/");
+    }
 
   let schema = yup.object().shape({
     name: yup.string().required('Digite um nome válido para continuar'),
@@ -56,13 +56,12 @@ function Register() {
         }
       })
     .catch((error) => {
-        console.log(error.response)
-
         if(error.response.status === 401) {
             toast.error('Erro no cadastro')
         }
     })
   }
+  
   if(login) {
     return <Redirect to="/" /> 
   }
