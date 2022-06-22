@@ -4,8 +4,9 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { toast } from "react-toastify";
 import { Redirect, useHistory } from "react-router-dom";
 import { Api } from "../../services/api";
-import { FormStyle } from "./style";
+import { FormStyle, Labels } from "./style";
 import { useState} from "react";
+
 
 function Login() {
   const [redirect, setRedirect] = useState(false);
@@ -57,21 +58,29 @@ function Login() {
 
   return (
     <div>
-      <h2>Login</h2>
+     
       <FormStyle onSubmit={handleSubmit(DatesApi)}>
+        <Labels>
+        <h2 className="text">Login</h2>
+        <label>E-mail</label>
         <input
           {...register("email")}
           placeholder="Digite aqui seu e-mail"
         ></input>
-         {errors.email && <span role="alert">{errors.email.message}</span>}
+         {errors.email && <span role="alert" className="error">{errors.email.message}</span>}
+        </Labels>
+        <Labels>
+         <label>Senha</label>
         <input
           {...register("password")}
           placeholder="Digite aqui sua senha"
         ></input>
-        {errors.password && <span role="alert">{errors.password.message}</span>}
+        {errors.password && <span role="alert" className="error">{errors.password.message}</span>}
+        </Labels>
         <button type="submit">Confirmar dados</button>
-        <p>Sem cadastro?</p>
-        <button onClick={handleClick}>Cadastrar</button>
+        
+        <p className="msg">Ainda não possui uma conta?</p>
+        <button onClick={handleClick} className="button">Cadastrar</button>
       </FormStyle>
     </div>
   );

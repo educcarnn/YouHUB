@@ -40,6 +40,7 @@ export const AddStyle = styled.div`
 }
 @media (min-width: 768px) {
     width: 65vh;
+    margin-top: -10%;
 }
 `
 
