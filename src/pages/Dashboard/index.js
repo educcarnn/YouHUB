@@ -1,10 +1,10 @@
 import { useHistory } from "react-router-dom";
 import { ItemCart } from "../../components/CardInfo";
 import { useState } from "react";
-
+import Logo from "../../imgs/Logo.svg"
 import NewTechs from "../../components/NewTechs";
 import { Api } from "../../services/api";
-
+import Add from "../../imgs/Add.svg"
 import { Header, Message, AddTech, DivFather } from "./style";
 
 function Dashboard(user) {
@@ -40,17 +40,18 @@ function Dashboard(user) {
       <DivFather>
         <div>
           <Header>
-            <span>Kenzie HUB</span>
-            <button onClick={handleClick}>Voltar</button>
-          
+            <img src={Logo} alt={Logo}></img>
+            <button onClick={handleClick} className='buttonReturn'>Sair</button>
           </Header>
           <Message>
-            <span>Olá, {datesDash.name}</span>
-            <span>{datesDash.course_module}</span>
+            <span className="firstText">Olá, {datesDash.name}</span>
+            <span className="secondText">{datesDash.course_module}</span>
           </Message>
           <AddTech>
-            <span>Tecnologias</span>
-            <button onClick={() => setOpen(true)}>Adicionar</button>
+            <span className="techs">Tecnologias</span>
+            <button onClick={() => setOpen(true)} className="buttonClick">
+              <img src={Add} alt={Add}></img>
+            </button>
           </AddTech>
         </div>
 

@@ -2,18 +2,32 @@ import styled from "styled-components";
 
 export const AddStyle = styled.div`
 @media (min-width: 375px) {
-  background-color: black;
-  width: 44vh;
-  height: 25%;
+  background: #212529;
+  width: 15rem;
+  height: 9rem;
   position: fixed;
   display: flex; 
   padding-bottom: 5%;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  margin-left: -3%;
 
+  .textFirst{
+    font-size: 65%;
+  }
+  .registerTech {
+    margin-top: 7%;
+    font-family: 'Inter', sans-serif;
+    background: #FF577F;
+    border: none;
+    color: white;
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
   .cardInfo {
     display: flex;
+    padding-top: 10%;
     text-align: initial;
     flex-direction: column;
     align-items: stretch;

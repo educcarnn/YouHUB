@@ -13,9 +13,21 @@ export const LiCard = styled.li`
     background-color: #121214;
     padding-left: 20%;
     margin-left: -25%;
+    border-radius: 5px;
     margin-bottom: 10%;
     body{
         background-color: gray;
+    }
+    .buttonRemove{
+        background-color: transparent;
+        border: none;
+    }
+    .titleText{
+        font-weight: 700;
+    }
+    .spanName{
+        font-weight: 400;
+        font-size: 70%;
     }
 }
 @media(min-width: 768px){

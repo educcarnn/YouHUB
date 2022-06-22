@@ -1,7 +1,7 @@
 import { Api } from "../../services/api";
 import { toast } from "react-toastify";
 import { LiCard } from "./style";
-
+import Delete from "../../imgs/Delete.svg"
 export const ItemCart = (item) => {
 
     const handleRemove = () =>{ 
@@ -25,10 +25,10 @@ export const ItemCart = (item) => {
 
     return (
       <LiCard key={item.id} className="Li-Name">
-        <h3 className="h3-name">{item.title}</h3>
-        <span className="span-name">{item.status}</span>
-        <button onClick={() => handleRemove(item.id)}>
-          Remover
+        <p className="titleText" >{item.title}</p>
+        <span className="spanName">{item.status}</span>
+        <button onClick={() => handleRemove(item.id)} className="buttonRemove">
+          <img src={Delete} alt={Delete}></img>
         </button>
       </LiCard>
     );

@@ -47,15 +47,15 @@ function NewTechs({ open, setOpen, setCustomsElems }) {
           </div>
         <FormNew onSubmit={handleSubmit(registerTech)}>
           <div className="cardInfo">
-            <label>Nome</label>
+            <label className="textFirst">Nome</label>
             <input {...register("title")}></input>
-            <label>Selecionar Status</label>
+            <label className="textFirst">Selecionar Status</label>
             <select defaultValue={"Iniciante"} {...register("status")}>
                 <option value="Iniciante">Iniciante</option>
                 <option value="Intermediário">Intermediário</option>
                 <option value="Avançado">Avançado</option>
             </select>
-            <button type="submit">Adicionar tecnologia</button>
+            <button type="submit" className="registerTech">Cadastrar tecnologia</button>
           </div>
         </FormNew>
       </AddStyle>
