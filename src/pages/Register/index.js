@@ -7,6 +7,7 @@ import { Api } from "../../services/api";
 import { toast } from "react-toastify";
 import { useState } from "react";
 import { Labels } from "../Login/style";
+import Logo from "../../imgs/Logo.svg"
 
 function Register() {
     const [login, setLogin] = useState(false)
@@ -71,58 +72,61 @@ function Register() {
     <div>
       <FormRegister onSubmit={handleSubmit(sendates)}>
        
-          <div>
-            <span>Kenzie Hub</span>
-            <button onClick={handleClick}>Voltar</button>
+          <div className="header">
+            <img src={Logo} alt={Logo} className="img"></img>
+            <button onClick={handleClick} className="return">Voltar</button>
           </div>
     <div>
-        <h2>Crie sua conta</h2>
-              <p>Rapido e grátis, vamos nessa</p>
+        <h2 className="textFirst">Crie sua conta</h2>
+              <p className="textSecond">Rapido e grátis, vamos nessa</p>
     </div>
         <Labels>
-        <label>Nome</label>
-        <input placeholder="Digite aqui seu nome" {...register("name")}></input>
+        <label className="labels">Nome</label>
+        <input placeholder="Digite aqui seu nome" {...register("name")} className='styleInputs'></input>
         {errors.name && <span role="alert" className="error">{errors.name.message}</span>}
         </Labels>
         <Labels>
-        <label>E-mail</label>
+        <label className="labels">E-mail</label>
         <input
           placeholder="Digite aqui seu e-mail"
           {...register("email")}
+          className='styleInputs'
         ></input>
           {errors.email && <span role="alert" className="error">{errors.email.message}</span>}
         </Labels>
         <Labels>
-        <label>Senha</label>
+        <label className="labels">Senha</label>
         <input
           placeholder="Digite aqui sua senha"
           {...register("password")}
           type="password"
+          className='styleInputs'
         ></input>
         {errors.password && <span role="alert" className="error">{errors.password.message}</span>}
         </Labels>
         <Labels>
-        <label>Confirmar senha</label>
+        <label className="labels">Confirmar senha</label>
         <input
           placeholder="Digite novamente sua senha"
           {...register("confirmPassword")}
           type="password"
+          className='styleInputs'
         ></input>
         {errors.confirmPassword && <span role="alert" className="error">{errors.confirmPassword.message}</span>}
         </Labels>
         <Labels>
-        <label>Bio</label>
-        <input placeholder="Fale sobre você" {...register('bio')}></input>
+        <label className="labels">Bio</label>
+        <input placeholder="Fale sobre você" {...register('bio')} className='styleInputs'></input>
         {errors.bio && <span role="alert" className="error">{errors.bio.message}</span>}
         </Labels>
         <Labels>
-        <label>Contato</label>
-        <input placeholder="Fale sobre você" {...register('contact')}></input>
+        <label className="labels">Contato</label>
+        <input placeholder="Fale sobre você" {...register('contact')} className='styleInputs'></input>
         {errors.contact && <span role="alert" className="error">{errors.contact.message}</span>}
         </Labels>
         <Labels>
-        <label>Selecionar módulo</label>
-        <select defaultValue={"1 Módulo"}{...register("course_module")}>
+        <label className="labels">Selecionar módulo</label>
+        <select defaultValue={"1 Módulo"}{...register("course_module")} className='styleInputs'>
           <option value="1 Módulo">1 Módulo</option>
           <option value="2 Módulo">2 Módulo</option>
           <option value="3 Módulo">3 Módulo</option>

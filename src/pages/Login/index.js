@@ -6,7 +6,7 @@ import { Redirect, useHistory } from "react-router-dom";
 import { Api } from "../../services/api";
 import { FormStyle, Labels } from "./style";
 import { useState} from "react";
-
+import Logo from "../../imgs/Logo.svg"
 
 function Login() {
   const [redirect, setRedirect] = useState(false);
@@ -60,6 +60,7 @@ function Login() {
     <div>
      
       <FormStyle onSubmit={handleSubmit(DatesApi)}>
+      <img src={Logo} Alt={Logo} className="img"></img>
         <Labels>
         <h2 className="text">Login</h2>
         <label className="styleLabels">E-mail</label>
@@ -79,7 +80,7 @@ function Login() {
         ></input>
         {/* {errors.password && <span role="alert" className="error">{errors.password.message}</span>} */}
         </Labels>
-        <button type="submit">Confirmar dados</button>
+        <button type="submit" className="buttonSubmit">Confirmar dados</button>
         <p className="msg">Ainda não possui uma conta?</p>
         <button onClick={handleClick} className="button">Cadastrar</button>
       </FormStyle>

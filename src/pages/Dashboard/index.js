@@ -42,7 +42,7 @@ function Dashboard(user) {
           <Header>
             <span>Kenzie HUB</span>
             <button onClick={handleClick}>Voltar</button>
-            <span></span>
+          
           </Header>
           <Message>
             <span>Olá, {datesDash.name}</span>
