@@ -1,25 +1,18 @@
-import { Redirect, useHistory, useParams } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { ItemCart } from "../../components/CardInfo";
 import { useState } from "react";
-import { yupResolver } from "@hookform/resolvers/yup";
+
 import NewTechs from "../../components/NewTechs";
 import { Api } from "../../services/api";
-import { toast } from "react-toastify";
+
 import { Header, Message, AddTech, DivFather } from "./style";
 
 function Dashboard(user) {
   const [open, setOpen] = useState(false);
-  const [reoloading, setReoloading] = useState(false);
   const [customsElems, setCustomsElems] = useState();
   const [datesDash, setDatesDash] = useState(
     JSON.parse(localStorage.getItem("user"))
   );
-
-  if (reoloading) {
-    setTimeout(() => {
-      window.location.reload();
-    }, 2000);
-  }
 
   let history = useHistory();
 

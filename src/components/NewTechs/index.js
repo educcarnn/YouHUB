@@ -15,7 +15,7 @@ function NewTechs({ open, setOpen, setCustomsElems }) {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    // formState: { errors },
   } = useForm({ resolver: yupResolver(schema) });
 
   const registerTech = (infos) => {

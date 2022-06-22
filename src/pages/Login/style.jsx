@@ -14,9 +14,19 @@ export const FormStyle = styled.form`
     margin-left: -32%;
     border-radius: 4px;
     padding-bottom: 10%;
-    .text{
-        text-align: center;
-        font-size: 100%;
+    .text {
+      text-align: center;
+      font-size: 100%;
+    }
+    .styleLabels{
+        font-size: 60%;
+    }
+    .styleInputs {
+      border: 2px solid gray;
+     border-radius: 2px;
+      padding-top: 3%;
+      padding-bottom: 3%;
+      padding-left: 3%;
     }
     .error {
       max-width: 100%;
@@ -25,11 +35,12 @@ export const FormStyle = styled.form`
       margin-bottom: 2%;
       color: red;
     }
-    .msg{
-        font-size: 50%;
+    .msg {
+      font-size: 50%;
+      padding-top: 5%;
     }
-    .button{
-        margin-top: 5%;
+    .button {
+      margin-top: 5%;
     }
   }
 `;
@@ -40,6 +51,6 @@ export const Labels = styled.div`
     flex-direction: column;
     text-align: justify;
     margin-bottom: 5%;
-    max-width: 55%;
+    max-width: 100%;
   }
 `;

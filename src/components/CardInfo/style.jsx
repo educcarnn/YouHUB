@@ -4,7 +4,7 @@ export const LiCard = styled.li`
 @media (min-width: 375px) {
   display: flex;
     width: 73%;
-    gap: 20%;
+    gap: 10%;
     padding-right: 27%;
     flex-direction: row;
     align-items: center;

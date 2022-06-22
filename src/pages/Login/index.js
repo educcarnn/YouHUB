@@ -26,7 +26,7 @@ function Login() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    
   } = useForm({ resolver: yupResolver(schema) });
 
   const DatesApi = (base) => {
@@ -62,23 +62,24 @@ function Login() {
       <FormStyle onSubmit={handleSubmit(DatesApi)}>
         <Labels>
         <h2 className="text">Login</h2>
-        <label>E-mail</label>
+        <label className="styleLabels">E-mail</label>
         <input
           {...register("email")}
           placeholder="Digite aqui seu e-mail"
+          className="styleInputs"
         ></input>
-         {errors.email && <span role="alert" className="error">{errors.email.message}</span>}
+         {/* {errors.email && <span role="alert" className="error">{errors.email.message}</span>} */}
         </Labels>
         <Labels>
-         <label>Senha</label>
+         <label className="styleLabels">Senha</label>
         <input
           {...register("password")}
           placeholder="Digite aqui sua senha"
+          className="styleInputs"
         ></input>
-        {errors.password && <span role="alert" className="error">{errors.password.message}</span>}
+        {/* {errors.password && <span role="alert" className="error">{errors.password.message}</span>} */}
         </Labels>
         <button type="submit">Confirmar dados</button>
-        
         <p className="msg">Ainda não possui uma conta?</p>
         <button onClick={handleClick} className="button">Cadastrar</button>
       </FormStyle>
