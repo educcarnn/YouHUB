@@ -5,6 +5,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import NewTechs from "../../components/NewTechs";
 import { Api } from "../../services/api";
 import { toast } from "react-toastify";
+import { Header, Message, AddTech, DivFather } from "./style";
 
 function Dashboard(user) {
   const [open, setOpen] = useState(false);
@@ -43,23 +44,34 @@ function Dashboard(user) {
     });
 
     return (
-      <div>
+      <DivFather>
         <div>
-          <button onClick={handleClick}>Voltar</button>
-          <div>
+          <Header>
+            <span>Kenzie HUB</span>
+            <button onClick={handleClick}>Voltar</button>
+            <span></span>
+          </Header>
+          <Message>
             <span>Olá, {datesDash.name}</span>
             <span>{datesDash.course_module}</span>
-          </div>
-          <div>
-          <button onClick={() => setOpen(true)}>Adicionar</button>
-          </div>
+          </Message>
+          <AddTech>
+            <span>Tecnologias</span>
+            <button onClick={() => setOpen(true)}>Adicionar</button>
+          </AddTech>
         </div>
-        
+
         <div>
           <NewTechs open={open} user={user} setOpen={setOpen} />
         </div>
-        <ul>{customsElems?.data?.techs?.map(ItemCart)}</ul>
-      </div>
+        {customsElems?.data?.techs?.length > 0 ? (
+          <ul className="ulStyle">
+            {customsElems?.data?.techs?.map(ItemCart)}
+          </ul>
+        ) : (
+          <div className="msg">Adicione novas Tecnologias</div>
+        )}
+      </DivFather>
     );
   } else {
     return (

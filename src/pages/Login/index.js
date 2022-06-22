@@ -56,24 +56,24 @@ function Login() {
   }
 
   return (
-    <>
+    <div>
       <h2>Login</h2>
       <FormStyle onSubmit={handleSubmit(DatesApi)}>
         <input
           {...register("email")}
           placeholder="Digite aqui seu e-mail"
         ></input>
+         {errors.email && <span role="alert">{errors.email.message}</span>}
         <input
           {...register("password")}
           placeholder="Digite aqui sua senha"
         ></input>
-        {errors.email && <span role="alert">{errors.email.message}</span>}
         {errors.password && <span role="alert">{errors.password.message}</span>}
         <button type="submit">Confirmar dados</button>
         <p>Sem cadastro?</p>
         <button onClick={handleClick}>Cadastrar</button>
       </FormStyle>
-    </>
+    </div>
   );
 }
 export default Login;

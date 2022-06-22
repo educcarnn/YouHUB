@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
 export const AddStyle = styled.div`
+@media (min-width: 375px) {
   background-color: black;
-  width: 100%;
+  width: 44vh;
   height: 25%;
+  position: fixed;
   display: flex; 
   padding-bottom: 5%;
   flex-direction: row;
@@ -25,7 +27,7 @@ export const AddStyle = styled.div`
     background-color: #343B41;
     padding-bottom: 1%;
     width: 130%;
-    height: 100%;
+    height: 20%;
     border-bottom: 1px solid white;
     display: flex;
     padding-bottom: 1%;
@@ -35,12 +37,18 @@ export const AddStyle = styled.div`
     align-content: space-between;
     justify-content: space-around;
   }
-`;
+}
+@media (min-width: 768px) {
+    width: 65vh;
+}
+`
 
 export const FormNew = styled.form`
+@media (min-width: 375px) {
   display: flex;
   flex-direction: column;
   max-width: 80%;
   justify-content: center;
   gap: 5%;
+}
 `;
