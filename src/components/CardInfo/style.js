@@ -38,4 +38,15 @@ export const LiCard = styled.li`
     flex-wrap: nowrap;
     justify-content: space-between;
 }
+@media(min-width: 1024px){
+    margin-left: -90%;
+    padding-left: 52%;
+    gap: 20%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 5%;
+}
 `

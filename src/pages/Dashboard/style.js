@@ -5,10 +5,10 @@ export const Header = styled.div`
     justify-content: space-between;
     padding-top: 5%;
     flex-direction: row;
-    border-bottom: 1px solid #212529;
     width: 130%;
     margin-left: -15%;
     padding-bottom: 10%;
+    justify-content: space-around;
 
     .buttonReturn {
       background: #212529;
@@ -23,6 +23,7 @@ export const Header = styled.div`
     margin-left: -40%;
     width: 154%;
     display: flex;
+    
     padding-left: 25%;
     flex-wrap: wrap;
     flex-direction: row;
@@ -43,6 +44,8 @@ export const DivFather = styled.div`
   @media (min-width: 320px) {
     .ulStyle {
       background-color: #212529;
+      padding-left: 100%;
+      margin-left: -45%;
       width: 100%;
       padding-left: 31%;
       margin-left: -15%;
@@ -54,15 +57,29 @@ export const DivFather = styled.div`
       margin-top: 10%;
     }
   }
+  @media (min-width: 1024px){
+    .ulStyle{
+      padding-left: 100%;
+      margin-left: -45%;
+    }
+  }
 `;
 
+export const InLine = styled.span`
+  margin-top: 50px;
+  width: 600%;
+  position: absolute;
+  border-bottom: 1px solid #212529;
+`
+ 
 export const Message = styled.div`
   @media (min-width: 320px) {
     display: flex;
     text-align: justify;
+    align-items: center;
     flex-direction: column;
     padding-top: 10%;
-    border-bottom: 1px solid #212529;
+    justify-content: space-around;
     padding-bottom: 10%;
     margin-left: -14%;
     width: 128%;
@@ -81,6 +98,7 @@ export const Message = styled.div`
       gap: 20%;
       width: 154%;
       display: flex;
+      justify-content: space-around;
       padding-left: 25%;
       flex-wrap: wrap;
       flex-direction: row;

@@ -53,7 +53,7 @@ export const AddStyle = styled.div`
   }
 }
 @media (min-width: 768px) {
-    width: 65vh;
+    width: 20rem;
     margin-top: -10%;
 }
 `

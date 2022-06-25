@@ -10,6 +10,7 @@ export const FormRegister = styled.form`
   padding-right: 8%;
   margin-top: 8%;
   padding-bottom: 7%;
+  
   .header {
     background-color: #121214;
     width: 119%;
@@ -27,6 +28,10 @@ export const FormRegister = styled.form`
   }
   .labels {
     font-size: 60%;
+  }
+  .labelSelect {
+    font-size: 60%;
+    margin-left: 10%;
   }
   .return {
     padding-top: 2%;
@@ -46,8 +51,10 @@ export const FormRegister = styled.form`
     font-size: 75%;
     color: #868e96;
   }
-  .styleInputs {
-    border: 2px solid gray;
+  .styleInputs, .styleInputsSelect {
+    width: 85%;
+    border: none;
+    background-color:  #343B41;
     border-radius: 2px;
     padding-top: 1%;
     padding-bottom: 1%;
@@ -56,11 +63,13 @@ export const FormRegister = styled.form`
     font-family: "inter",sans-serif;
     font-weight: 400;
   }
+  .styleInputsSelect{
+    width: 90%;
+    color: #868E96;
+    padding-left: 2%;
+  }
   .error {
-    max-width: 100%;
-    font-size: 75%;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    font-size: 45%;
     color: red;
   }
   .msg {
@@ -69,6 +78,16 @@ export const FormRegister = styled.form`
   }
   .button {
     margin-top: 5%;
+  }
+  .buttonSubmitRegister{
+    max-width: 90%;
+    margin-left: 5%;
+    background: #59323F;
+    border: none;
+    color: white;
+    border-radius: 2px;
+    padding-top: 2%;
+    padding-bottom: 2%;
   }
 `;
 

@@ -5,7 +5,7 @@ import Logo from "../../imgs/Logo.svg"
 import NewTechs from "../../components/NewTechs";
 import { Api } from "../../services/api";
 import Add from "../../imgs/Add.svg"
-
+import { InLine } from "./style";
 import { Header, Message, AddTech, DivFather } from "./style";
 
 function Dashboard(user) {
@@ -43,11 +43,13 @@ function Dashboard(user) {
           <Header>
             <img src={Logo} alt={Logo}></img>
             <button onClick={handleClick} className='buttonReturn'>Sair</button>
-            <span></span>
+            <InLine></InLine>
+
           </Header>
           <Message>
             <span className="firstText">Olá, {datesDash.name}</span>
             <span className="secondText">{datesDash.course_module}</span>
+            <InLine></InLine>
           </Message>
           <AddTech>
             <span className="techs">Tecnologias</span>

@@ -4,13 +4,14 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { toast } from "react-toastify";
 import { Redirect, useHistory, Link } from "react-router-dom";
 import { Api } from "../../services/api";
-import { FormStyle, Labels } from "./style";
+import { FormStyle, LabelLogin } from "./style";
 import { useState} from "react";
 import Logo from "../../imgs/Logo.svg"
 
 
 function Login() {
   const [redirect, setRedirect] = useState(false);
+
   let history = useHistory();
 
   function handleClick() {
@@ -70,7 +71,7 @@ function Login() {
       <div>   
         <FormStyle onSubmit={handleSubmit(DatesApi)}>
         <img src={Logo} Alt={Logo} className="img"></img>
-          <Labels>
+          <LabelLogin>
           <h2 className="text">Login</h2>
           <label className="styleLabels">E-mail</label>
           <input
@@ -78,15 +79,18 @@ function Login() {
             placeholder="Digite aqui seu e-mail"
             className="styleInputs"
           ></input>
-          </Labels>
-          <Labels>
+          </LabelLogin>
+          <LabelLogin>
            <label className="styleLabels">Senha</label>
+         
           <input
+          type="password"
             {...register("password")}
             placeholder="Digite aqui sua senha"
             className="styleInputs"
           ></input>
-          </Labels>
+          
+          </LabelLogin>
           <button type="submit" className="buttonSubmit">Confirmar dados</button>
           <p className="msg">Ainda não possui uma conta?</p>
           <button onClick={handleClick} className="button">Cadastrar</button>
