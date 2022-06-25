@@ -2,11 +2,12 @@ import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { toast } from "react-toastify";
-import { Redirect, useHistory } from "react-router-dom";
+import { Redirect, useHistory, Link } from "react-router-dom";
 import { Api } from "../../services/api";
 import { FormStyle, Labels } from "./style";
 import { useState} from "react";
 import Logo from "../../imgs/Logo.svg"
+
 
 function Login() {
   const [redirect, setRedirect] = useState(false);
@@ -55,36 +56,45 @@ function Login() {
   if (redirect) {
     return <Redirect to="/dashboard" />;
   }
-
-  return (
+  
+  
+  if (localStorage.getItem("token") !== null) {
+    return (
     <div>
-     
-      <FormStyle onSubmit={handleSubmit(DatesApi)}>
-      <img src={Logo} Alt={Logo} className="img"></img>
-        <Labels>
-        <h2 className="text">Login</h2>
-        <label className="styleLabels">E-mail</label>
-        <input
-          {...register("email")}
-          placeholder="Digite aqui seu e-mail"
-          className="styleInputs"
-        ></input>
-         {/* {errors.email && <span role="alert" className="error">{errors.email.message}</span>} */}
-        </Labels>
-        <Labels>
-         <label className="styleLabels">Senha</label>
-        <input
-          {...register("password")}
-          placeholder="Digite aqui sua senha"
-          className="styleInputs"
-        ></input>
-        {/* {errors.password && <span role="alert" className="error">{errors.password.message}</span>} */}
-        </Labels>
-        <button type="submit" className="buttonSubmit">Confirmar dados</button>
-        <p className="msg">Ainda não possui uma conta?</p>
-        <button onClick={handleClick} className="button">Cadastrar</button>
-      </FormStyle>
+      <div>Há um login identificado no sistema, não é preciso realizar novamente</div>
+      <Link to="/dashboard">Dashboard</Link>
     </div>
-  );
+    )
+  } else {
+    return (
+      <div>   
+        <FormStyle onSubmit={handleSubmit(DatesApi)}>
+        <img src={Logo} Alt={Logo} className="img"></img>
+          <Labels>
+          <h2 className="text">Login</h2>
+          <label className="styleLabels">E-mail</label>
+          <input
+            {...register("email")}
+            placeholder="Digite aqui seu e-mail"
+            className="styleInputs"
+          ></input>
+          </Labels>
+          <Labels>
+           <label className="styleLabels">Senha</label>
+          <input
+            {...register("password")}
+            placeholder="Digite aqui sua senha"
+            className="styleInputs"
+          ></input>
+          </Labels>
+          <button type="submit" className="buttonSubmit">Confirmar dados</button>
+          <p className="msg">Ainda não possui uma conta?</p>
+          <button onClick={handleClick} className="button">Cadastrar</button>
+        </FormStyle>
+      </div>
+    );
+  }
+
+  
 }
 export default Login;

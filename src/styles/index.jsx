@@ -10,6 +10,7 @@ export const Global = createGlobalStyle`
         font-size: calc(10px + 2vmin);
         color: white;
         box-sizing: border-box;
+        overflow-x: hidden;
         font-family: 'inter', sans-serif;
     }
     button{

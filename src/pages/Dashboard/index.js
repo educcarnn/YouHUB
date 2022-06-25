@@ -5,6 +5,7 @@ import Logo from "../../imgs/Logo.svg"
 import NewTechs from "../../components/NewTechs";
 import { Api } from "../../services/api";
 import Add from "../../imgs/Add.svg"
+
 import { Header, Message, AddTech, DivFather } from "./style";
 
 function Dashboard(user) {
@@ -42,6 +43,7 @@ function Dashboard(user) {
           <Header>
             <img src={Logo} alt={Logo}></img>
             <button onClick={handleClick} className='buttonReturn'>Sair</button>
+            <span></span>
           </Header>
           <Message>
             <span className="firstText">Olá, {datesDash.name}</span>

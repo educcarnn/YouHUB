@@ -1,6 +1,6 @@
 import styled from "styled-components";
 export const Header = styled.div`
-  @media (min-width: 375px) {
+  @media (min-width: 320px) {
     display: flex;
     justify-content: space-between;
     padding-top: 5%;
@@ -40,7 +40,7 @@ export const Header = styled.div`
   }
 `;
 export const DivFather = styled.div`
-  @media (min-width: 375px) {
+  @media (min-width: 320px) {
     .ulStyle {
       background-color: #212529;
       width: 100%;
@@ -57,7 +57,7 @@ export const DivFather = styled.div`
 `;
 
 export const Message = styled.div`
-  @media (min-width: 375px) {
+  @media (min-width: 320px) {
     display: flex;
     text-align: justify;
     flex-direction: column;
@@ -100,7 +100,7 @@ export const Message = styled.div`
 `;
 
 export const AddTech = styled.div`
-  @media (min-width: 375px) {
+  @media (min-width: 320px) {
     display: flex;
     flex-direction: row;
     align-items: stretch;

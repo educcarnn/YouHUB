@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const FormStyle = styled.form`
-  @media (min-width: 375px) {
+  @media (min-width: 320px) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -68,7 +68,7 @@ export const FormStyle = styled.form`
 `;
 
 export const Labels = styled.div`
-  @media (min-width: 375px) {
+  @media (min-width: 320px) {
     display: flex;
     flex-direction: column;
     text-align: justify;

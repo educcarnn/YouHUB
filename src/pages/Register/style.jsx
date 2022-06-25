@@ -52,7 +52,7 @@ export const FormRegister = styled.form`
     padding-top: 1%;
     padding-bottom: 1%;
     padding-left: 4%;
-
+    margin-left: 10%;
     font-family: "inter",sans-serif;
     font-weight: 400;
   }
@@ -71,3 +71,16 @@ export const FormRegister = styled.form`
     margin-top: 5%;
   }
 `;
+
+export const LabelInfo = styled.div`
+  @media(min-width: 320px){
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 10%;
+    align-content: stretch;
+    flex-wrap: nowrap;
+  }
+`
