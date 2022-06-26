@@ -44,7 +44,6 @@ function Dashboard(user) {
             <img src={Logo} alt={Logo}></img>
             <button onClick={handleClick} className='buttonReturn'>Sair</button>
             <InLine></InLine>
-
           </Header>
           <Message>
             <span className="firstText">Olá, {datesDash.name}</span>

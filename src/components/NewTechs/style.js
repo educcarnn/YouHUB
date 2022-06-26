@@ -7,11 +7,12 @@ export const AddStyle = styled.div`
   height: 9rem;
   position: fixed;
   display: flex; 
-  padding-bottom: 5%;
+  
+  padding-bottom: 3rem;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  margin-left: -3%;
+
 
   .textFirst{
     font-size: 65%;
@@ -54,7 +55,6 @@ export const AddStyle = styled.div`
 }
 @media (min-width: 768px) {
     width: 20rem;
-    margin-top: -10%;
 }
 `
 

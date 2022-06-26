@@ -15,6 +15,9 @@ export const LiCard = styled.li`
     margin-left: -25%;
     border-radius: 5px;
     margin-bottom: 10%;
+    :hover{
+        background-color: #343B41;
+    }
     body{
         background-color: gray;
     }
@@ -35,8 +38,9 @@ export const LiCard = styled.li`
     display: flex;
     align-items: center;
     flex-direction: row;
+    justify-content: space-evenly;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    
 }
 @media(min-width: 1024px){
     margin-left: -90%;
