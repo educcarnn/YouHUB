@@ -42,7 +42,7 @@ export const FormStyle = styled.form`
       padding-top: 2%;
       padding-bottom: 2%;
       color: white;
-      background: #ff577f;
+      background: #cd0031;
       border: none;
     }
     .error {

@@ -70,7 +70,7 @@ function Login() {
     return (
       <div>   
         <FormStyle onSubmit={handleSubmit(DatesApi)}>
-        <img src={Logo} Alt={Logo} className="img"></img>
+        <span>YouHUB</span>
           <LabelLogin>
           <h2 className="text">Login</h2>
           <label className="styleLabels">E-mail</label>

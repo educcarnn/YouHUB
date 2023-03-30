@@ -89,7 +89,7 @@ function Register() {
       <div>
         <FormRegister onSubmit={handleSubmit(sendates)}>
           <div className="header">
-            <img src={Logo} alt={Logo} className="img"></img>
+            <span>YouHUB</span>
             <button onClick={handleClick} className="return">
               Voltar
             </button>

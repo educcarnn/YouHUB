@@ -1,12 +1,12 @@
 import { useHistory } from "react-router-dom";
 import { ItemCart } from "../../components/CardInfo";
 import { useState } from "react";
-import Logo from "../../imgs/Logo.svg"
+
 import NewTechs from "../../components/NewTechs";
 import { Api } from "../../services/api";
 import Add from "../../imgs/Add.svg"
-import { InLine } from "./style";
-import { Header, Message, AddTech, DivFather } from "./style";
+
+import { Header, Message, AddTech, DivFather, InLine } from "./style";
 
 function Dashboard(user) {
   const [open, setOpen] = useState(false);
@@ -41,7 +41,7 @@ function Dashboard(user) {
       <DivFather>
         <div>
           <Header>
-            <img src={Logo} alt={Logo}></img>
+            <span>YouHUB</span>
             <button onClick={handleClick} className='buttonReturn'>Sair</button>
             <InLine></InLine>
           </Header>

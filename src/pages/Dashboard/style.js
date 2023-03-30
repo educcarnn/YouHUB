@@ -1,6 +1,6 @@
 import styled from "styled-components";
 export const Header = styled.div`
-  @media (min-width: 375px) {
+  @media (max-width: 800px) {
     display: flex;
     justify-content: space-between;
     padding-top: 5%;
@@ -20,7 +20,7 @@ export const Header = styled.div`
       color: white;
     }
   }
-  @media (min-width: 768px) {
+  @media (max-width: 768px) {
     margin-left: -40%;
     width: 154%;
     display: flex;
@@ -43,7 +43,7 @@ export const Header = styled.div`
   }
 `;
 export const DivFather = styled.div`
-  @media (min-width: 375px) {
+  @media (max-width: 800px) {
     .ulStyle {
       background-color: #212529;
       padding-left: 100%;

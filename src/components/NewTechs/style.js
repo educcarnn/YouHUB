@@ -20,7 +20,7 @@ export const AddStyle = styled.div`
   .registerTech {
     margin-top: 7%;
     font-family: 'Inter', sans-serif;
-    background: #FF577F;
+    background: #cd0031;
     border: none;
     color: white;
     padding-top: 2%;
