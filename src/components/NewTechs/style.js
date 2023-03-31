@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const AddStyle = styled.div`
-@media (min-width: 375px) {
+
   background: #212529;
   width: 15rem;
   height: 9rem;
@@ -52,18 +52,16 @@ export const AddStyle = styled.div`
     align-content: space-between;
     justify-content: space-around;
   }
-}
-@media (min-width: 768px) {
-    width: 20rem;
-}
+
+
 `
 
 export const FormNew = styled.form`
-@media (min-width: 375px) {
+
   display: flex;
   flex-direction: column;
   max-width: 80%;
   justify-content: center;
   gap: 5%;
-}
+
 `;

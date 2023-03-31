@@ -7,7 +7,6 @@ import { Api } from "../../services/api";
 import { toast } from "react-toastify";
 import { useState } from "react";
 import { Labels } from "../Login/style";
-import Logo from "../../imgs/Logo.svg";
 import { LabelInfo } from "./style";
 
 function Register() {

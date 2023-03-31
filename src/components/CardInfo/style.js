@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const LiCard = styled.li`
-@media (min-width: 375px) {
+
   display: flex;
     width: 73%;
     gap: 10%;
@@ -32,25 +32,6 @@ export const LiCard = styled.li`
         font-weight: 400;
         font-size: 70%;
     }
-}
-@media(min-width: 768px){
-    gap: 10%;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: nowrap;
-    
-}
-@media(min-width: 1024px){
-    margin-left: -90%;
-    padding-left: 52%;
-    gap: 20%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    margin-bottom: 5%;
-}
+
+
 `

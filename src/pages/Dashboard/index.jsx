@@ -4,9 +4,9 @@ import { useState } from "react";
 
 import NewTechs from "../../components/NewTechs";
 import { Api } from "../../services/api";
-import Add from "../../imgs/Add.svg"
+import Add from "../../imgs/Add.svg";
 
-import { Header, Message, AddTech, DivFather, InLine } from "./style";
+import { Header, Message, AddTech, DivFather } from "./style";
 
 function Dashboard(user) {
   const [open, setOpen] = useState(false);
@@ -42,13 +42,13 @@ function Dashboard(user) {
         <div>
           <Header>
             <span>YouHUB</span>
-            <button onClick={handleClick} className='buttonReturn'>Sair</button>
-            <InLine></InLine>
+            <button onClick={handleClick} className="buttonReturn">
+              Sair
+            </button>
           </Header>
           <Message>
             <span className="firstText">Olá, {datesDash.name}</span>
             <span className="secondText">{datesDash.course_module}</span>
-            <InLine></InLine>
           </Message>
           <AddTech>
             <span className="techs">Tecnologias</span>
