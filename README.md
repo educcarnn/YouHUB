@@ -41,7 +41,11 @@ Para utilizar o CostCaptor, siga os passos abaixo:
 
 
 Clone este repositório em sua máquina local.
+
+
 Instale as dependências do projeto utilizando o comando yarn.
+
+
 Inicie o servidor de desenvolvimento com yarn start.
 
 
