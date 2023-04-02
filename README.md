@@ -1,8 +1,24 @@
-*Kenzie Hub*
+*You HUB*
 
 
-Gerencie suas tecnologias/aprendizado da melhor maneira possível 
+Gerencie suas tecnologias/aprendizado da melhor maneira possível
 
-**Principais tecnologias usadas:** REACT (Hooks), STYLED COMPONENTS, AXIOS, YUP / REACT FORM, API REST
 
-<a href="https://react-entrega-s2-kenzie-hub-educcarnn-educcarnn.vercel.app">Link</a>    
+**Principais tecnologias usadas:** 
+
+
+. React Js (Hooks)
+
+
+. Styled Components
+
+
+. Axios
+
+. Api Rest
+
+
+. Yup / React Form
+
+
+<a href="https://youhub-mu.vercel.app/">Site</a>    
