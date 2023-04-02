@@ -1,25 +1,28 @@
 import styled from "styled-components";
 
 export const AddStyle = styled.div`
-
   background: #212529;
-  width: 15rem;
-  height: 9rem;
+  width: 30%;
+  height: 10rem;
   position: fixed;
-  display: flex; 
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  top: 50;
+  left: 50;
+  display: flex;
   padding-bottom: 3rem;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 
-
-  .textFirst{
+  .textFirst {
     font-size: 65%;
   }
   .registerTech {
     margin-top: 7%;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     background: #cd0031;
     border: none;
     color: white;
@@ -33,15 +36,16 @@ export const AddStyle = styled.div`
     flex-direction: column;
     align-items: stretch;
   }
-  .buttonClick{
+  .buttonClick {
     background-color: transparent;
     color: white;
+    font-weight: 700;
     border: none;
   }
-  .RegisterTech{
-    background-color: #343B41;
+  .RegisterTech {
+    background-color: #343b41;
     padding-bottom: 1%;
-    width: 130%;
+    width: 100%;
     height: 20%;
     border-bottom: 1px solid white;
     display: flex;
@@ -53,15 +57,19 @@ export const AddStyle = styled.div`
     justify-content: space-around;
   }
 
-
-`
+  .name {
+    font-size: 75%;
+    font-weight: 700;
+  }
+  @media(max-width: 800px){
+    width: 50%;
+  }
+`;
 
 export const FormNew = styled.form`
-
   display: flex;
   flex-direction: column;
   max-width: 80%;
   justify-content: center;
   gap: 5%;
-
 `;

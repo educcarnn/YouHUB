@@ -58,7 +58,7 @@ function Dashboard(user) {
           </AddTech>
         </div>
 
-        <div>
+        <div className="addTech">
           <NewTechs open={open} user={user} setOpen={setOpen} />
         </div>
         {customsElems?.data?.techs?.length > 0 ? (

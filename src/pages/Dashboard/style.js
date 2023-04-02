@@ -1,45 +1,50 @@
 import styled from "styled-components";
 
 export const Header = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5%;
+  padding-bottom: 10%;
+  margin-left: -15%;
+  width: 130%;
+  gap: 39%;
 
-.buttonReturn {
-      background: #212529;
-      border: none;
-      padding-top: 1%;
-      padding-bottom: 1%;
-      border-radius: 5%;
-      color: white;
-    }
-
-
-    display: flex;
-    justify-content: space-between;
-    padding-top: 5%;
-    padding-bottom: 10%;
-    margin-left: -15%;
-    width: 130%;
-    gap: 39%;
-  
+  .buttonReturn {
+    background: #212529;
+    border: none;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-radius: 5%;
+    color: white;
+  }
 
   @media (max-width: 800px) {
     margin-left: -40%;
-    width: 154%;
+    width: 100%;
     display: flex;
     padding-left: 25%;
     flex-wrap: wrap;
     flex-direction: row;
     align-content: flex-start;
-    align-items: flex-start;
   }
 `;
 
 export const DivFather = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  .addTech{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
   .msg {
     color: red;
     margin-top: 10%;
   }
 
-  @media (max-width: 800px) {
+
     .ulStyle {
       background-color: #212529;
       padding-left: 31%;
@@ -49,7 +54,7 @@ export const DivFather = styled.div`
       padding-bottom: 1%;
       border-radius: 5px;
     }
-  }
+  
 `;
 
 export const Message = styled.div`
@@ -76,15 +81,18 @@ export const Message = styled.div`
   }
 
   @media (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
     margin-left: -40%;
-    width: 154%;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     padding-left: 25%;
     flex-wrap: wrap;
-    flex-direction: row;
+  
     align-content: flex-start;
-    align-items: flex-start;
+
   }
 `;
 
@@ -111,11 +119,5 @@ export const AddTech = styled.div`
     padding-bottom: 5%;
     margin-left: -14%;
     width: 128%;
-
-    @media (max-width: 768px) {
-      gap: 120%;
-      margin-left: -7%;
-      padding-top: 0;
-    }
   }
 `;

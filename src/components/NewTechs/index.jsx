@@ -42,7 +42,7 @@ function NewTechs({ open, setOpen, setCustomsElems }) {
     return (
       <AddStyle>
           <div className="RegisterTech">
-            <span>Cadastrar tecnologia</span>
+            <span className="name">Cadastrar tecnologia</span>
             <button onClick={() => setOpen(false)} className="buttonClick">X</button>
           </div>
         <FormNew onSubmit={handleSubmit(registerTech)}>
