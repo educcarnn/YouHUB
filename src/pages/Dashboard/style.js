@@ -64,8 +64,6 @@ export const Message = styled.div`
   padding-bottom: 10%;
   justify-content: center;
   align-items: stretch;
-  /*padding-top: 10%;
-  padding-bottom: 10%;*/
 
   .firstText {
     font-weight: 700;
@@ -86,7 +84,7 @@ export const Message = styled.div`
     width: 100%;
     display: flex;
     justify-content: space-around;
-    //padding-left: 25%;
+
     flex-wrap: wrap;
     align-content: flex-start;
   }
