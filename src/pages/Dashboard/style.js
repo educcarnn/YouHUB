@@ -34,7 +34,7 @@ export const DivFather = styled.div`
   flex-direction: column;
   align-items: stretch;
 
-  .addTech{
+  .addTech {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -44,29 +44,28 @@ export const DivFather = styled.div`
     margin-top: 10%;
   }
 
-
-    .ulStyle {
-      background-color: #212529;
-      padding-left: 31%;
-      margin-left: -15%;
-      width: 100%;
-      padding-top: 10%;
-      padding-bottom: 1%;
-      border-radius: 5px;
-    }
-  
+  .ulStyle {
+    background-color: #212529;
+    padding-left: 31%;
+    margin-left: -15%;
+    width: 100%;
+    padding-top: 10%;
+    padding-bottom: 1%;
+    border-radius: 5px;
+  }
 `;
 
 export const Message = styled.div`
   margin-top: 0;
-  margin-left: -55%;
-  width: 128%;
+
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  padding-top: 10%;
   padding-bottom: 10%;
+  justify-content: center;
+  align-items: stretch;
+  /*padding-top: 10%;
+  padding-bottom: 10%;*/
 
   .firstText {
     font-weight: 700;
@@ -84,19 +83,21 @@ export const Message = styled.div`
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    margin-left: -40%;
     width: 100%;
     display: flex;
     justify-content: space-around;
-    padding-left: 25%;
+    //padding-left: 25%;
     flex-wrap: wrap;
-  
     align-content: flex-start;
-
   }
 `;
 
 export const AddTech = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+
   .buttonClick {
     background-color: transparent;
     color: white;

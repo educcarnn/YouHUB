@@ -1,10 +1,10 @@
-import { AddStyle } from "./style";
+
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { Api } from "../../services/api";
 import { toast } from "react-toastify";
-import { FormNew } from "./style";
+import { FormNew, AddStyle } from "./style";
 
 function NewTechs({ open, setOpen, setCustomsElems }) {
   let schema = yup.object().shape({
