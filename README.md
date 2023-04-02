@@ -6,7 +6,11 @@ O YouHUB é um sistema de gerenciamento de cadastro de tecnologias que permite a
 
 
 **Funcionalidades**
+
+
 Cadastro de novas tecnologias
+
+
 Visualização de tecnologias cadastradas
 
 
