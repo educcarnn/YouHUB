@@ -17,19 +17,19 @@ Visualização de tecnologias cadastradas
 **Principais tecnologias usadas:** 
 
 
-React Js (Hooks)
+- React Js (Hooks)
 
 
-Styled Components
+- Styled Components
 
 
-Axios
+- Axios
 
 
-Api Rest
+- Api Rest
 
 
-Yup / React Form
+- Yup / React Form
 
 
 
