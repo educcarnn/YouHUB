@@ -9,13 +9,7 @@ O YouHUB é um sistema de gerenciamento de cadastro de tecnologias que permite a
 
 <a href="https://youhub-mu.vercel.app/">Site</a>    
 
-Para facilitar seu uso, você pode entrar com essa conta de teste, para usufruir do projeto
-
-
-E-mail: testeperfil@gmail.com
-
-
-Senha: 123456
+Para facilitar seu uso, você pode entrar com essa conta de teste, para usufruir do projeto: E-mail: testeperfil@gmail.com / Senha: 123456
 
 
 
