@@ -39,7 +39,7 @@ Visualização de tecnologias cadastradas
 **Instalação**
 
 
-Para utilizar o CostCaptor, siga os passos abaixo:
+Para utilizar o YouHub, siga os passos abaixo:
 
 
 Clone este repositório em sua máquina local.
