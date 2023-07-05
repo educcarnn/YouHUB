@@ -7,6 +7,9 @@
 O YouHUB é um sistema de gerenciamento de cadastro de tecnologias que permite ao usuário cadastrar e visualizar informações sobre suas tecnologias aprendidas. O objetivo do projeto é permitir que o usuário organize suas informações sobre tecnologias de forma simples e intuitiva.
 
 
+<a href="https://youhub-mu.vercel.app/">Site</a>    
+
+
 **Funcionalidades**
 
 
@@ -53,7 +56,7 @@ Inicie o servidor de desenvolvimento com yarn start.
 
 
 
-<a href="https://youhub-mu.vercel.app/">Site</a>    
+
 
 
 **Licença**
